@@ -1,15 +1,15 @@
-// import {Route} from "react-router-dom";
-// import {Link} from "react-router-dom";
+import {Route} from "react-router-dom";
 import {Routes} from "react-router-dom";
-import logo from './logo.svg';
+import SignUp from "./SignUp";
+import LogIn from './LogIn';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
      <Routes>
-       {/*<Route path="/" element={signUp} />*/}
-       {/*<Route path="/" element={signUp} />*/}
+       <Route exact path="/" Component={LogIn} />
+       <Route exact path="/signup" Component={SignUp} />
      </Routes>
     </div>
   );
