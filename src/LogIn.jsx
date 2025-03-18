@@ -6,18 +6,31 @@ import {Link} from "react-router-dom";
 
 
 function LogIn() {
+        const myStyle = {
+            backgroundImage: "url('/assets/images/spec.png')",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center center",
+            backgroundSize: "cover"
+        };
     return (
-        <main class="LogMain">
+        <main class="Main">
             <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <img src="/assets/images/LogImg.png" alt="img" />
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
+                    <div className="img_bg">
+                        <img class="welcome_img" src="/assets/images/welcome.png" alt="img" />
+                    </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <form>
-                        <label form="Email">Email</label>
-                        <input type="email" placeholder="Email" />
-                        <button><Link to="/login">Log In</Link></button>
-                        <button><Link to="/SignUp">Sign Up</Link></button>
+                <div style={myStyle} class="col-xs-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 img_bg2">
+                    <h2 class="text-center mt-5 head">Login</h2>
+                    <form class="signIn">
+                        <label htmlFor="Email" className="font-mulish font-size-14 font-weight-600">Email
+                            Address</label>
+                        <input type="email" name="email" id="email" className="input mb-3" placeholder="Enter Email Address"/>
+
+                        <label htmlFor="Password" className="font-mulish font-size-14 font-weight-600">Password</label>
+                        <input type="password" name="password" id="password" className="input mb-3" placeholder="Enter Password"/>
+                        <button class="Btn linkBtn"><Link class="linkText" to="/">Log In</Link></button>
+                        {/*<button><Link to="/SignUp">Sign Up</Link></button>*/}
                     </form>
                 </div>
             </div>
@@ -25,4 +38,5 @@ function LogIn() {
         </main>
     );
 }
+
 export default LogIn;
